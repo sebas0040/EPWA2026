@@ -1,5 +1,4 @@
 import { http } from "./http";
-
 export type Customer = {
     id: number;
     fullName: string;
@@ -13,7 +12,6 @@ export type CreateCustomerDto = {
     phone?: string;
 };
 export type UpdateCustomerDto = Partial<CreateCustomerDto>;
-
 export const customersApi = {
     list: () => http<Customer[]>("/customers"),
     create: (dto: CreateCustomerDto) =>
